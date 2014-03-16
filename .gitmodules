@@ -1,0 +1,3 @@
+[submodule "site-cookbooks/mysql2"]
+	path = site-cookbooks/mysql2
+	url = https://github.com/opscode-cookbooks/mysql.git
