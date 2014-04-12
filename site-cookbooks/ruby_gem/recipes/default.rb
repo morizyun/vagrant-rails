@@ -1,10 +1,3 @@
-bash 'set rbenv permission' do
-  user 'root'
-  code <<-EOC
-    chmod -R 777 /home/vagrant/.rbenv
-  EOC
-end
-
 gems = %w(bundler rails sqlite3 therubyracer mysql2)
 gems.each do |gem|
   gem_package gem do

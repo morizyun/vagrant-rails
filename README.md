@@ -1,6 +1,6 @@
-# Vagrantfile with CentOS 6.5/ruby 2.1.0/MySQL/Apache
+# Vagrantfile with CentOS 6.5/ruby 2.1.0/MySQL/Nginx
 
-_Description: Vagrantfile with CentOS 6.5/ruby 2.1.0/MySQL/Apache
+_Description: Vagrantfile with CentOS 6.5/ruby 2.1.0/MySQL/Nginx
 
 ## Project Setup
 

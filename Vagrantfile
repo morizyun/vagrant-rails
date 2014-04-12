@@ -18,32 +18,27 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :chef_solo do |chef|
     chef.log_level = :debug
     chef.cookbooks_path = './site-cookbooks'
-    chef.run_list = %w(base nginx mysql56 database ruby_build rbenv::user ruby_gem)
+    chef.run_list = %w(base nginx mysql56 database ruby_build rbenv::system ruby_gem)
 
     chef.json = {
         mysql: {
             password: ''
         },
         rbenv: {
-            user_installs: [
-                {
-                    user: 'vagrant',
-                    rubies: ['2.1.0'],
-                    global: '2.1.0',
-                    gems: {
-                        '2.1.0' => [
-                            {
-                                name: 'bundler',
-                                options: '--no-ri --no-rdoc'
-                            },
-                            {
-                                name: 'rails',
-                                options: '--no-ri --no-rdoc'
-                            }
-                        ]
+            rubies: ['2.1.0'],
+            global: '2.1.0',
+            gems: {
+                '2.1.0' => [
+                    {
+                        name: 'bundler',
+                        options: '--no-ri --no-rdoc'
+                    },
+                    {
+                        name: 'rails',
+                        options: '--no-ri --no-rdoc'
                     }
-                }
-            ]
+                ]
+            }
         },
         nginx: {
             application: 'chef_rails',
