@@ -15,6 +15,9 @@
     "mysql56": {
       "path": "./site-cookbooks/mysql56"
     },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
     "rbenv": {
       "locked_version": "0.7.3",
       "git": "git://github.com/fnichol/chef-rbenv.git",
@@ -67,9 +70,6 @@
     },
     "yum-epel": {
       "locked_version": "0.3.4"
-    },
-    "ruby_build": {
-      "locked_version": "0.8.0"
     },
     "java": {
       "locked_version": "1.22.0"
